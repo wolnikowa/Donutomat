@@ -1,0 +1,43 @@
+@import "../base.scss";
+
+.nav{
+    position:fixed;
+    min-height:100%;
+    width:200px;
+    background-color: $black;
+    padding:10px;
+    >.user{
+        margin-top:15px;
+        margin-bottom:40px;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        >img{
+            flex:45%;
+            width:50%;
+            margin-bottom: 10px;
+        }
+        >p{
+            flex:50%;
+            font-size:1.7rem;
+            color:$white;
+        }
+    }
+    >.tabs{
+        >ul{
+            >li{
+                list-style-type: none;
+                margin-bottom: 30px;
+                >a{
+                    color:$white;
+                    font-size: 1.5rem;
+                    text-decoration: none;
+                }
+                >a:focus,a:hover{
+                    color:$jitYellow;
+                }
+            }
+        }
+    }
+}

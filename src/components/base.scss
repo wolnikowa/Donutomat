@@ -1,9 +1,13 @@
 // defining colors
-$lightGrey: rgb(206, 206, 206);
-$jitYellow: rgb(233, 230, 39);
+$lightGrey: #EDEDED;
+$jitYellow: #FFD242;
 $black: rgb(0,0,0);
+$white: rgb(255,255,255);
 *{
     font-size: 62.5%;
     padding:0;
     margin:0;
+}
+html,body{
+    height: 100%;
 }
