@@ -1,0 +1,11 @@
+@import "../base.scss";
+
+div{
+    width:100%;
+    height:60px;
+    background-color: $black;
+    >img{
+        float:left;
+        margin-left:15px;
+    }
+}
