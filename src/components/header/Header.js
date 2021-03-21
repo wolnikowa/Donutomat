@@ -1,6 +1,7 @@
 import React from 'react';
 import './header.scss';
 import jitLogo from "./../../assets/logoBiale.png";
+import jitName from "./../../assets/name.png";
 
 
 class Header extends React.Component{
@@ -9,7 +10,11 @@ class Header extends React.Component{
             <div className='header'>
                 <div className='images'>
                     <img src={jitLogo} />
-                    <img src="" />
+                    <div>
+                        <span>D</span>
+                        <span className='yellow'>o</span>
+                        <span>nuts</span>
+                    </div>
                 </div>
             </div>
         )
