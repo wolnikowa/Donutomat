@@ -5,7 +5,7 @@ import './main.scss';
 
 const Main = () => (
 
-    // Julia w Main wywołujemy twoją tabelę i mojego forma. Dorzuć to wywołanie swojej tabeli (np tak jak zakomentowałam poniżej)
+    // Julia w Main wywołujemy twoją tabelę i mojego forma. Dorzuć tu wywołanie swojej tabeli (np tak jak zakomentowałam poniżej)
 
     <div className='mainContainer'>
         {/* <DonutTable /> */}
