@@ -1,15 +1,17 @@
 import React from 'react';
 import DonutForm from '../DonutForm';
+import Table from '../Table';
 import './main.scss';
 
 
 const Main = () => (
 
-    // Julia w Main wywołujemy twoją tabelę i mojego forma. Dorzuć to wywołanie swojej tabeli (np tak jak zakomentowałam poniżej)
+   
 
-    <div className='mainContainer'>
-        {/* <DonutTable /> */}
+    <div>
+        <Table />
         <DonutForm />
+        
     </div>
 )
 
