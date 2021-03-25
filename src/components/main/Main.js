@@ -1,18 +1,18 @@
-import React from 'react';
-import DonutForm from '../DonutForm';
-import Table from '../Table';
-import './main.scss';
+// import React from 'react';
+// import DonutForm from '../DonutForm';
+// import Table from '../Table';
+// import './main.scss';
 
 
-const Main = () => (
+// const Main = () => (
 
    
 
-    <div>
-        <Table />
-        <DonutForm />
+//     <div className='mainContainer'>
+//         <Table />
+//         <DonutForm />
         
-    </div>
-)
+//     </div>
+// )
 
-export default Main
+// export default Main
