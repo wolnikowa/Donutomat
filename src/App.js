@@ -4,7 +4,6 @@ import Nav from './components/nav/Nav';
 import Main from './components/main/Main';
 
 const App = () => (
-
     <div>
         <Header />
         <Nav />
