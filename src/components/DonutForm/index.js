@@ -4,12 +4,10 @@ import './main.scss';
 import donut from './../../assets/donut-2.png';
 import FormInput from '../FormInput';
 
-
 const DonutForm = () => {
-
     const form = useFormik({
         initialValues: {
-            donutorName: 'Add dunator name',
+            donutorName: 'Add donutor name',
             donutDate: '12/01/2021',
         },
         onSubmit: values => {
@@ -23,30 +21,23 @@ const DonutForm = () => {
                 <p>Add a new donutor</p> <img src={donut} />
             </header>
             <form onSubmit={form.handleSubmit} className="insideForm">
-
                 <label htmlFor="donutorName" className="firstLabel">Name</label>
                 <FormInput
-                    id="donutorName"
                     name="donutorName"
                     type="text"
                     onChange={form.handleChange}
                     value={form.values.donutorName} />
 
                 <label htmlFor="donutDate" className="secondLabel">Date</label>
-
                 <FormInput
-                    id="donutDate"
                     name="donutDate"
                     type="date"
                     onChange={form.handleChange}
                     value={form.values.donutDate} />
-
                 <button type="submit">Add a new donutor</button>
             </form>
         </div>
     )
-
-
 }
 
 export default DonutForm
