@@ -6,10 +6,7 @@ table{
     font-family: 'Roboto', sans-serif;
     border-spacing: 2cm;
     width:1000px;
-    margin-left: 250px;
-    margin-right: 35px;
-     margin-top: -10px;
-    // margin: -10px auto;
+    margin: -10px auto;
         >thead{
             display: grid;
             width: 1000px;
@@ -52,4 +49,11 @@ table{
         
         }
     }
+}
+.mainContainer {
+    position: absolute;
+    left: 220px;
+    top: 70px;
+    width: calc(100% - 220px);
+    height: calc(100% - 70px);
 }

@@ -7,11 +7,11 @@ import Body from './components/Body/index.js';
 
   const Table = () => {
         return (
-           <div>
+           <div className="mainContainer">
               
               <table>
-              <Header />
-              <Body />
+                  <Header />
+                  <Body />
               </table>
            </div>
         )
