@@ -25,6 +25,7 @@ FormInput.propTypes = {
         PropTypes.string,
         PropTypes.date
     ]),
+
 }
 
 export default FormInput
