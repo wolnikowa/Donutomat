@@ -24,6 +24,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
+    "react-table": "^7.6.3",
     "style-loader": "^2.0.0"
   },
   "devDependencies": {
