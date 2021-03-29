@@ -38,7 +38,7 @@ const DonutForm = () => {
                     type="date"
                     onChange={form.handleChange}
                     value={form.values.donutDate}
-                    className="secondInput" />
+                    className="firstInput" />
 
                 <button type="submit">Add a new donutor</button>
             </form>
