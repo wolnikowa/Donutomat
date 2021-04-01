@@ -41,7 +41,8 @@ module.exports = {
                         options: {
                             implementation: require("sass")
                         }
-                    }
+                    },
+
                 ],
             },
             {
@@ -55,6 +56,10 @@ module.exports = {
                     }
                 ]
             },
+            {
+                test: /\.(eot|woff|woff2|ttf|otf)$/,
+                loader: 'file-loader',
+            }
 
         ]
     },
