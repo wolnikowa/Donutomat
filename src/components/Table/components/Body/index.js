@@ -1,46 +1,19 @@
-import React from 'react';
 
-const donutors = [
-    {
-     id: '1',
-     name:'Julia Bessman',
-     addedby: 'Ryszard Jakielski',
-     dateadd: '20-03-2021',
-     datedonut: '21-03-2021'
-    },
-    {
-        id: '2',
-        name:'Alicja Kempa',
-        addedby: 'Ryszard Jakielski',
-        dateadd: '20-03-2021',
-        datedonut: '21-03-2021'
-    },
-    {
-        id: '3',
-        name:'Wiktoria Wolnik',
-        addedby:'Ryszard Jakielski',
-        dateadd:'20-03-2021',
-        datedonut: '21-03-2021'
-    }
-  ]
-
-
-
-const Body = () => {
+const Body = (props) => {
     return (
 
 <tbody>
                     {
-                      donutors.map((donutors, index) => {
-                          const { id,name,addedby, dateadd,  datedonut } = donutors 
+                      data.map((props, index) => {
+                
                           return (
                            
                               <tr key={id} className>
                             
-                                <td>{name}</td>
-                                <td>{addedby}</td>
-                                <td>{dateadd}</td>
-                                <td>{datedonut}</td>
+                                <td>{props.name}</td>
+                                <td>{props.addedby}</td>
+                                <td>{props.dateadd}</td>
+                                <td>{props.datedonut}</td>
                                </tr>
                           
                       )}
