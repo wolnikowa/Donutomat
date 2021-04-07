@@ -1,6 +1,6 @@
 @import '../base.scss';
 
-input {
+.formInput {
     width: 500px;
     min-height: 50px;
     font-size: 2rem;
@@ -9,5 +9,4 @@ input {
     margin-bottom: 3rem;
     background-color: $white;
     color: rgba($black, 0.5);
-    
 }

@@ -3,6 +3,7 @@ import { useFormik } from 'formik';
 import './main.scss';
 import donut from './../../assets/donut-2.png';
 import FormInput from '../FormInput';
+import Button from '../Button';
 
 const DonutForm = () => {
     const form = useFormik({
@@ -34,7 +35,7 @@ const DonutForm = () => {
                     type="date"
                     onChange={form.handleChange}
                     value={form.values.donutDate} />
-                <button type="submit">Add a new donutor</button>
+                <Button type="submit" text="Add new donator"></Button>
             </form>
         </div>
     )

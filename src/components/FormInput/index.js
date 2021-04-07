@@ -9,7 +9,8 @@ const FormInput = ({ id, name, type, onChange, value }) => (
         name={name}
         type={type}
         onChange={onChange}
-        value={value} >
+        value={value}
+        className='formInput' >
     </input>
 )
 // jeśli dodaję isRequired dla type i value, wyrzuca mi błąd w konsoli. Dlaczego? 
