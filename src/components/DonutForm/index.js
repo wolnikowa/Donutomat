@@ -29,7 +29,7 @@ const DonutForm = () => {
     };
 
     return (
-        <div className="formCointainer">
+        <div className="formContainer">
             <header>
                 <p>Add a new donutor</p> <img src={donut} />
             </header>
@@ -50,7 +50,7 @@ const DonutForm = () => {
                         />
                     </div>
 
-                <button type="submit">Add a new donutor</button>
+                <button className="button" type="submit">Add a new donutor</button>
             </form>
         </div>
     )

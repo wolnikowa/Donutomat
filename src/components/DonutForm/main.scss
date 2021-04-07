@@ -1,7 +1,7 @@
 @import '../base.scss';
 // @import "react-datepicker/src/stylesheets/datepicker.scss";
 
-.formCointainer {
+.formContainer {
     position: relative;
     display: flex;
     margin: 90px 40px;
@@ -20,7 +20,7 @@
         margin-bottom: 5vh;
     }
     p{
-        font-size: 5rem;
+        font-size: 3.5rem;
         padding-right: 20px;
     }
     img {
@@ -32,10 +32,10 @@
         flex-direction: column;
         align-items: center;
 
-        input, .datepicker {
+        input {
             width: 500px;
             min-height: 50px;
-            font-size: 2rem;
+            font-size: 1.5rem;
             border: none;
             padding-left: 10px;
             margin-bottom: 3rem;
@@ -53,18 +53,18 @@
         label {
             width: 510px;
             text-align: left;
-            font-size: 2rem;
+            font-size: 1.5rem;
             padding-bottom: 10px;
         }
 
-        button {
+        .button {
             background-color: $jitYellow;
             border: none;
-            font-size: 2rem;
+            font-size: 1.5rem;
             padding: 1rem 5rem;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
         }
-        button:hover {
+        .button:hover {
             color: $white;
         }
         
