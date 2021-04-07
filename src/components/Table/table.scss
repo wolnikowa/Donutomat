@@ -9,5 +9,46 @@ table{
     margin-left: 250px;
     margin-right: 35px;
      margin-top: -10px;
-}
+        >thead{
+            display: grid;
+            width: 1000px;
+            background-color: black;
+            color: $jitYellow;
+            height: 50px;
+            font-size: 60px;
+            font-family: 'Roboto', sans-serif;
+            align-items: center;
+       
         
+        
+        >tr{
+            display: grid;
+            grid-template-columns:repeat(4, 1fr);
+            >th{
+                justify-self:center;
+            }
+            }
+        }
+        >tbody{
+            display: grid;
+            font-size: 60px;
+            width: 1000px;
+            height: 200px;
+            text-align: center;
+       
+  
+  
+        >tr{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            align-items: center;
+       
+            
+        }
+        tr:nth-child(even){
+            background-color:$lightGrey;
+    
+        
+        }
+    }
+}
