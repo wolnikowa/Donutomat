@@ -1,19 +1,32 @@
-
+import './header.scss';
 import React from 'react';
 
-const Header = () => {
+
+const Header = ({columns}) => {
     return (
 
 <thead>
               
-<tr >
-    <th>Name</th>
-    <th>Added by</th> 
-    <th> Date of adding</th> 
-    <th>Donuts date</th>
-</tr>
+{
+    data.map((dataItem, index) => (
+                
+                           
+        <tr>
+        {
+            columns.map((columns) => (
+            <th>{dataItem[columns.label]}</th>             
+        ))
+        }
+                      
+        </tr>   
+                          
+        ))
+}
 
 </thead>
 
     )}
 export default Header
+
+
+

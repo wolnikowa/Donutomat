@@ -1,25 +1,29 @@
+import React from 'react';
 
-const Body = (props) => {
+import './body.scss';
+
+
+const Body = ({data, columns}) => {
     return (
 
 <tbody>
-                    {
-                      data.map((props, index) => {
+      
+      {
+        data.map((dataItem, index) => (
                 
-                          return (
-                           
-                              <tr key={id} className>
-                            
-                                <td>{props.name}</td>
-                                <td>{props.addedby}</td>
-                                <td>{props.dateadd}</td>
-                                <td>{props.datedonut}</td>
-                               </tr>
+          <tr key={dataItem.id} className>
+          {
+              columns.map((column) => (
+              <td>{dataItem[column.name]}</td>
+                         
+        ))
+          }
+                      
+          </tr>   
                           
-                      )}
-                      )}
-                 </tbody>
+        ))
+      }
+</tbody>
     )}
-
 
     export default Body
