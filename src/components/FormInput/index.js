@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const FormInput = ({ id, name, type, onChange, value }) => (
 
-    <input className='input'
+    <input
         id={id || name}
         name={name}
         type={type}

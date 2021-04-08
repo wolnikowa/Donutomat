@@ -15,6 +15,7 @@ const DonutForm = () => {
         },
         onSubmit: values => {
             // alert(JSON.stringify(values, null, 2));
+            console.log(JSON.stringify(values, null, 2));
         },
     });
 
@@ -43,12 +44,6 @@ const DonutForm = () => {
                     value={form.values.donutorName} />
 
                 <label htmlFor="donutDate" className="secondLabel">Date</label>
-                <FormInput
-                    name="donutDate"
-                    type="date"
-                    onChange={form.handleChange}
-                    value={form.values.donutDate} />
-
                 <div className="datepicker">
                     <DatePicker
                         selected={startDate}
