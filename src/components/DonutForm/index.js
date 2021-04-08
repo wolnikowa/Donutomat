@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import './main.scss';
 import donut from './../../assets/donut-2.png';
 import FormInput from '../FormInput';
 import Button from '../Button';
+import DatePicker from "react-datepicker"
+import "react-datepicker/dist/react-datepicker.css";
 
 const DonutForm = () => {
     const form = useFormik({
@@ -16,8 +18,19 @@ const DonutForm = () => {
         },
     });
 
+    const [startDate, setStartDate] = useState(new Date());
+    const MyContainer = ({ className, children }) => {
+        return (
+            <div style={{ background: "#216ba5", color: "#fff" }}>
+                <CalendarContainer className={className}>
+                    <div style={{ position: "relative" }}>{children}</div>
+                </CalendarContainer>
+            </div>
+        );
+    };
+
     return (
-        <div className="formCointainer">
+        <div className="formContainer">
             <header>
                 <p>Add a new donutor</p> <img src={donut} />
             </header>
@@ -35,7 +48,15 @@ const DonutForm = () => {
                     type="date"
                     onChange={form.handleChange}
                     value={form.values.donutDate} />
-                <Button type="submit" text="Add new donator"></Button>
+
+                <div className="datepicker">
+                    <DatePicker
+                        selected={startDate}
+                        onChange={date => setStartDate(date)}
+                        CalendarContainer={MyContainer}
+                    />
+                </div>
+                <Button type="submit" text="Add new donator" />
             </form>
         </div>
     )
