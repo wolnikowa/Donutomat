@@ -14,7 +14,6 @@ const DonutForm = () => {
             donutDate: '12/01/2021',
         },
         onSubmit: values => {
-            // alert(JSON.stringify(values, null, 2));
             console.log(JSON.stringify(values, null, 2));
         },
     });
