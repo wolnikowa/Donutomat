@@ -18,7 +18,7 @@ const Body = ({data, columns}) => {
                          
         ))
           }
-                      
+                    
           </tr>   
                           
         ))

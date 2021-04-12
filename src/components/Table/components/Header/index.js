@@ -7,21 +7,18 @@ const Header = ({columns}) => {
 
 <thead>
               
-{
-    data.map((dataItem, index) => (
-                
                            
         <tr>
         {
-            columns.map((columns) => (
-            <th>{dataItem[columns.label]}</th>             
+            columns.map((column) => (
+            <th>{column.label}</th>             
         ))
         }
                       
         </tr>   
                           
-        ))
-}
+  
+
 
 </thead>
 
