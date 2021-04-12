@@ -2,19 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './style.scss'
 
-const Button = (props, onClick) => (
+const Button = (props) => (
 
     <button
         {...props}
-        onClick={onClick}
         className='formButton'>
-        {props.text}
+        {props.children}
     </button>
 );
 
 Button.propTypes = {
     type: PropTypes.string,
-    text: PropTypes.string.isRequired,
+    children: PropTypes.string.isRequired,
     onClick: PropTypes.func
 }
 
