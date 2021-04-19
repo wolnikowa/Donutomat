@@ -8,7 +8,7 @@ import Body from './components/Body/index.js';
   const Table = ({data, columns}) => {
         return (
            <div>
-              <table>
+              <table className="table">
               <Header columns={columns} />
               <Body data={data} columns={columns} />
               </table>

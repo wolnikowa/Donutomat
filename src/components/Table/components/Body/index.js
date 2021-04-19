@@ -1,29 +1,25 @@
 import React from 'react';
-
 import './body.scss';
+import Rows from '/Users/admin/Documents/GitHub/Donutomat/src/components/Table/components/Rows/index.js'
+import Cell from '/Users/admin/Documents/GitHub/Donutomat/src/components/Table/components/Cell/index.js'
 
-
-const Body = ({data, columns}) => {
+const Body = ({data}) => {
     return (
 
-<tbody>
+<tbody className = "tbody">
       
       {
         data.map((dataItem, index) => (
-                
-          <tr key={dataItem.id} className>
-          {
-              columns.map((column) => (
-              <td>{dataItem[column.name]}</td>
-                         
+          
+         <Rows /> 
+         <Cell />
+                   
         ))
-          }
-                    
-          </tr>   
-                          
-        ))
+     
       }
+     
 </tbody>
+
     )}
 
     export default Body
