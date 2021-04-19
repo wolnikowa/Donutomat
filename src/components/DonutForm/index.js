@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useFormik, useField, useFormikContext } from 'formik';
+import React, { useCallback } from 'react';
+import { Formik, Form } from 'formik';
 import './main.scss';
 import donut from './../../assets/donut-2.png';
 import FormInput from '../FormInput';
@@ -8,41 +8,39 @@ import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css";
 import DatePickerField from '../DatePickerField';
 
+const initialValues = {
+    donutorName: 'Add donutor name',
+    donutDate: '12/01/2021',
+};
 
 const DonutForm = () => {
-    const form = useFormik({
-        initialValues: {
-            donutorName: 'Add donutor name',
-            donutDate: '12/01/2021',
-        },
-        onSubmit: values => {
-            console.log(JSON.stringify(values, null, 2));
-        },
-    });
-
-    // const [startDate, setStartDate] = useState(new Date());
-
+    const onSubmit = useCallback((values) => {
+        console.log(JSON.stringify(values, null, 2));
+    }, []);
 
     return (
         <div className="formContainer">
             <header>
                 <p>Add a new donutor</p> <img src={donut} />
             </header>
-            <form onSubmit={form.handleSubmit} className="insideForm">
-                <label htmlFor="donutorName" className="firstLabel">Name</label>
-                <FormInput
-                    name="donutorName"
-                    type="text"
-                    onChange={form.handleChange}
-                    value={form.values.donutorName}
-                />
+            <Formik
+                initialValues={initialValues}
+                onSubmit={onSubmit}
+            >
+                <Form>
+                    <label htmlFor="donutorName" className="firstLabel">Name</label>
+                    <FormInput
+                        name="donutorName"
+                        type="text"
+                    />
 
-                <label htmlFor="donutDate" className="secondLabel">Date</label>
-                <div className="datepicker">
-                    <DatePickerField name="donutDate" />
-                </div>
-                <Button type="submit"> Add new donutor </ Button>
-            </form>
+                    <label htmlFor="donutDate" className="secondLabel">Date</label>
+                    <div className="datepicker">
+                        <DatePickerField name="donutDate" />
+                    </div>
+                    <Button type="submit"> Add new donutor </ Button>
+                </Form>
+            </Formik>
         </div>
     )
 }
