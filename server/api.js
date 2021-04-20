@@ -2,21 +2,21 @@ const bodyParser = require("body-parser");
 
 let donutorsList = [
   {
-    id: '1',
+    id: 1,
     name:'Julia Bessman',
     addedby: 'Ryszard Jakielski',
     dateadd: '20-03-2021',
     datedonut: '21-03-2021'
    },
    {
-       id: '2',
+       id: 2,
        name:'Alicja Kempa',
        addedby: 'Ryszard Jakielski',
        dateadd: '20-03-2021',
        datedonut: '21-03-2021'
    },
    {
-       id: '3',
+       id: 3,
        name:'Wiktoria Wolnik',
        addedby:'Ryszard Jakielski',
        dateadd:'20-03-2021',
@@ -29,9 +29,9 @@ const api = (app, server, compiler) => {
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(bodyParser.json());
 
-
   app.post('/api/donutors', (req, res) => {
-    donutorsList = [...donutorsList, req.body];
+    const maxId = donutorsList.reduce((highest, current) => current.id > highest ? current.id : highest, 0);
+    donutorsList = [...donutorsList, {...req.body, id: maxId + 1}];
     res.json(donutorsList);
   });
 
