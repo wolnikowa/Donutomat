@@ -1,28 +1,19 @@
-import './header.scss';
+
 import React from 'react';
 
-
-const Header = ({columns}) => {
+const Header = () => {
     return (
-<thead className="thead">
-              
-                           
-        <tr>
-        {
-            columns.map((column) => (
-            <th>{column.label}</th>             
-        ))
-        }
-                      
-        </tr>   
-                          
-  
 
+<thead>
+              
+<tr >
+    <th>Name</th>
+    <th>Added by</th> 
+    <th> Date of adding</th> 
+    <th>Donuts date</th>
+</tr>
 
 </thead>
 
     )}
 export default Header
-
-
-
