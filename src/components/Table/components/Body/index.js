@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 const donutors = [
     {
@@ -50,3 +51,29 @@ const Body = () => {
 
 
     export default Body
+=======
+import './body.scss';
+import Rows from '/Users/admin/Documents/GitHub/Donutomat/src/components/Table/components/Rows/index.js'
+import Cell from '/Users/admin/Documents/GitHub/Donutomat/src/components/Table/components/Cell/index.js'
+
+const Body = ({data}) => {
+    return (
+
+<tbody className = "tbody">
+      
+      {
+        data.map((dataItem, index) => (
+          
+         <Rows /> 
+         <Cell />
+                   
+        ))
+     
+      }
+     
+</tbody>
+
+    )}
+
+    export default Body
+>>>>>>> parent of 949bc23 (Rows/Cell)
