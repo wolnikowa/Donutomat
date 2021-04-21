@@ -1,15 +1,21 @@
 
 import React from 'react';
 import './style.scss';
+import Cell from '../Cell'
 
-const Rows = (props, dataItem) => {
+const Rows = ({dataItem, columns}) => {
     return (
-
-    <tr key={dataItem.id} className="rows">   
-    {props.Children}
-    </tr>   
-    );
-}
+        <tr className = "rows">
+        {
+            columns.map((column) => (
+                <Cell key={column.name}>{dataItem[column.name]} </Cell>
+                
+            ))
+        }
+             
+        </tr>
+        );
+        }
        
 export default Rows
 

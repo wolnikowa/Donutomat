@@ -1,11 +1,10 @@
 
 import React from 'react';
 
-
 const Cell = (props) => {
     return (
 
-<td> {props.Children}</td> 
+        <td> {props.children}</td> 
     );
 }
        
