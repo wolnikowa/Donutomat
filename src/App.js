@@ -5,6 +5,10 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import DonutForm from './components/DonutForm';
 import Table from './components/Table';
 
+
+
+    
+
 const App = () => (
     <Router >
         <div>
