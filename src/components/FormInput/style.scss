@@ -1,9 +1,9 @@
 @import '../base.scss';
 
-.formInput {
-    width: 500px;
+.formInput, .datepicker {
+    min-width: 500px;
     min-height: 50px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border: none;
     padding-left: 10px;
     margin-bottom: 3rem;

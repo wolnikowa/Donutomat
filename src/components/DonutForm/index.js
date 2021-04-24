@@ -4,7 +4,6 @@ import './main.scss';
 import donut from './../../assets/donut-2.png';
 import FormInput from '../FormInput';
 import Button from '../Button';
-import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css";
 import DatePickerField from '../DatePickerField';
 
@@ -35,8 +34,8 @@ const DonutForm = () => {
                     />
 
                     <label htmlFor="donutDate">Date</label>
-                    <div className="datepicker">
-                        <DatePickerField name="donutDate" />
+                    <div >
+                        <DatePickerField name="donutDate" className="datepicker" />
                     </div>
                     <Button type="submit"> Add new donutor </ Button>
                 </Form>

@@ -1,20 +1,18 @@
 
 import React from 'react';
 import './table.scss';
-import Header from './components/Header/index.js';
-import Body from './components/Body/index.js';
-  
+import Header from './components/Header';
+import Body from './components/Body';
 
-  const Table = () => {
-        return (
-           <div className="mainContainer">
-              
-              <table>
-                  <Header />
-                  <Body />
-              </table>
-           </div>
-        )
-     }
-  
-  export default Table
+const Table = ({ data, columns }) => {
+   return (
+      <div>
+         <table className="table">
+            <Header columns={columns} />
+            <Body data={data} columns={columns} />
+         </table>
+      </div>
+   )
+}
+
+export default Table

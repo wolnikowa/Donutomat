@@ -1,61 +1,11 @@
 @import "../base.scss";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
+.table{
+    border-spacing: 80px;
+    margin-left: 250px;
+    margin-right: 35px;
+    margin-top: -10px;
+    width: 80vw;
 
-.mainContainer {
-    position: absolute;
-    left: 220px;
-    top: 70px;
-    width: calc(100% - 220px);
-    height: calc(100% - 70px);
-    >table{
-
-        font-family: 'Roboto', sans-serif;
-        border-spacing: 2cm;
-        width:1000px;
-        margin: -10px auto;
-            >thead{
-                display: grid;
-                width: 1000px;
-                background-color: black;
-                color: $jitYellow;
-                height: 50px;
-                font-size: 30px;
-                font-weight:lighter;
-                font-family: 'Roboto', sans-serif;
-                align-items: center;
-           
-            
-            
-            >tr{
-                display: grid;
-                grid-template-columns:repeat(4, 1fr);
-                >th{
-                    justify-self:center;
-                }
-                }
-            }
-            >tbody{
-                display: grid;
-                font-size: 30px;
-                width: 1000px;
-                height: 200px;
-                text-align: center;
-           
-      
-      
-            >tr{
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                align-items: center;
-           
-                
-            }
-            tr:nth-child(even){
-                background-color:$lightGrey;
-        
-            
-            }
-        }
-    }
 }

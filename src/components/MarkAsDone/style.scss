@@ -1,0 +1,12 @@
+@import '../base.scss';
+
+.doneButton {
+    background-color: $jitYellow;
+    border: none;
+    font-size: 1rem;
+    padding: 0.4rem 1.5rem;
+}
+.doneButton:hover {
+    color: $white;
+    background-color: $black;
+}

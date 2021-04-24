@@ -2,12 +2,13 @@
 // @import "react-datepicker/src/stylesheets/datepicker.scss";
 
 .formContainer {
-    position: relative;
+    position: absolute;
+    left: 240px;
     display: flex;
     margin: 90px 40px;
     background-color: $lightGrey;
-    height: calc(100% - 180px);
-    width: calc(100% - 80px);
+    height: calc(100% - 240px);
+    width: calc(100% - 80px - 240px);
     flex-direction: column;
     text-align: center;
 
@@ -16,15 +17,15 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin-top: 5vh;
-        margin-bottom: 5vh;
+        margin-top: 4vh;
+        margin-bottom: 8vh;
     }
     p{
-        font-size: 3.5rem;
+        font-size: 2.5rem;
         padding-right: 20px;
     }
     img {
-        width:85px;
+        width:55px;
         height: auto;
     }
     .insideForm {
@@ -32,22 +33,10 @@
         flex-direction: column;
         align-items: center;
 
-        input {
-            width: 500px;
-            min-height: 50px;
-            font-size: 1.5rem;
-            border: none;
-            padding-left: 10px;
-            margin-bottom: 3rem;
-        }
-        .firstInput {
-            background-color: $white;
-            color: rgba($black, 0.5);
-        }
         label {
             width: 510px;
             text-align: left;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             padding-bottom: 10px;
         }
  

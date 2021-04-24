@@ -1,0 +1,14 @@
+@import "../../../base.scss";
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+
+.rows{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    
+}
+.rows:nth-child(even){
+    background-color:$lightGrey;
+
+}

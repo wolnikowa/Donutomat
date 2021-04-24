@@ -1,0 +1,20 @@
+
+@import "../../../base.scss";
+
+.thead{
+    display: grid;
+    background-color: black;
+    color: $jitYellow;
+    min-height: 50px;
+    padding: 10px 0;
+    font-size: calc(1.3 * #{$fontSize});
+    align-items: center;
+
+    >tr{
+        display: grid;
+        grid-template-columns:repeat(5, 1fr);
+        >th{
+            justify-self:center;
+        }
+        }
+}
