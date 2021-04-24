@@ -27,14 +27,14 @@ const DonutForm = () => {
                 initialValues={initialValues}
                 onSubmit={onSubmit}
             >
-                <Form>
-                    <label htmlFor="donutorName" className="firstLabel">Name</label>
+                <Form className="insideForm">
+                    <label htmlFor="donutorName">Name</label>
                     <FormInput
                         name="donutorName"
                         type="text"
                     />
 
-                    <label htmlFor="donutDate" className="secondLabel">Date</label>
+                    <label htmlFor="donutDate">Date</label>
                     <div className="datepicker">
                         <DatePickerField name="donutDate" />
                     </div>
