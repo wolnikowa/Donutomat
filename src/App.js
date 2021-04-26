@@ -50,7 +50,7 @@ const columnsDef = [
     {
         name: 'donutiondone',
         label: 'Is it done?',
-        accessor: (row) => <MarkAsDone />
+        accessor: (row) => <MarkAsDone data={row} />
     }
 ]
 

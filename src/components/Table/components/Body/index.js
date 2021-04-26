@@ -9,7 +9,7 @@ const Body = ({ data, columns }) => (
     <tbody className="tbody">
 
         {
-            data.map((dataItem, index) => (
+            data.map((dataItem) => (
 
                 <Rows key={dataItem.id} dataItem={dataItem} columns={columns} />
 

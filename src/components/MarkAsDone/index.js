@@ -2,16 +2,15 @@ import React, { useCallback } from 'react';
 import './style.scss'
 
 
-const MarkAsDone = (props) => {
+const MarkAsDone = ({ data }) => {
 
-    const onClick = useCallback((props) => {
-        console.log(JSON.stringify(props, null, 2));
-    }, []);
+    const onClick = useCallback(() => {
+        console.log(data);
+    }, [data]);
 
 
     return (
         <button
-            {...props}
             onClick={onClick}
             className='doneButton'>
             Done
