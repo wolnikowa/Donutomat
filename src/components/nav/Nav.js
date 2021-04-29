@@ -15,8 +15,7 @@ class Nav extends React.Component {
                     <ul>
                         <li><Link to={'/'}>List of donutors</Link></li>
                         <li><Link to={'/Form'}>Add a new donutor</Link></li>
-                        <li><a href="/">Report a dishonorable donutor</a></li>
-                        <li><a href="/">List of dishonorable donutors</a></li>
+                        <li><Link to={'/Dishonorable-donutors'}>List of dishonorable donutors </Link></li>
                         <li><a href="/">My calendar</a></li>
                     </ul>
                 </div>

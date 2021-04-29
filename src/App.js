@@ -2,8 +2,9 @@ import React from 'react';
 import Header from './components/header/Header';
 import Nav from './components/nav/Nav';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import DonutForm from './components/DonutForm';
-import List from './Pages/List'
+import List from './Pages/List';
+import Dishonorable from './Pages/Dishonorable';
+import Add from './Pages/Add';
 
 
 const App = () => (
@@ -16,7 +17,10 @@ const App = () => (
                     <List />
                 </Route>
                 <Route path="/Form">
-                    <DonutForm />
+                    <Add />
+                </Route>
+                <Route path="/Dishonorable-donutors">
+                    <Dishonorable />
                 </Route>
             </Switch>
         </div>

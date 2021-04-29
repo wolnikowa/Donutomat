@@ -8,21 +8,24 @@ const data = [
         name: 'Julia Bessman',
         addedby: 'Ryszard Jakielski',
         dateadd: '20-03-2021',
-        datedonut: '21-03-2021'
+        datedonut: '21-03-2021',
+        lateness: '5'
     },
     {
         id: '2',
         name: 'Alicja Kempa',
         addedby: 'Ryszard Jakielski',
         dateadd: '20-03-2021',
-        datedonut: '21-03-2021'
+        datedonut: '21-03-2021',
+        lateness: '5'
     },
     {
         id: '3',
         name: 'Wiktoria Wolnik',
         addedby: 'Ryszard Jakielski',
         dateadd: '20-03-2021',
-        datedonut: '21-03-2021'
+        datedonut: '21-03-2021',
+        lateness: '5'
     }
 ]
 
@@ -44,16 +47,16 @@ const columnsDef = [
         label: 'Donuts date'
     },
     {
-        name: 'donutiondone',
-        label: 'Is it done?',
-        accessor: (row) => <MarkAsDone data={row} />
+        name: 'lateness',
+        label: 'Days of late',
+
     }
 ];
 
-const List = () => {
+const Dishonorable = () => {
     return (
         <Table data={data} columns={columnsDef} />
     )
 }
 
-export default List
+export default Dishonorable
