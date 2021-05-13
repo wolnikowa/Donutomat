@@ -1,6 +1,7 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
+const { api } = require('./server/api');
 
 
 module.exports = {
@@ -12,7 +13,8 @@ module.exports = {
         publicPath: '/',
     },
     devServer: {
-        historyApiFallback: true
+        historyApiFallback: true,
+        before: api
     },
     module: {
         rules: [
