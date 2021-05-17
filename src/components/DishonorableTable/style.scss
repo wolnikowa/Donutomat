@@ -1,0 +1,16 @@
+@import './../Table/table.scss';
+
+.mainContainer {
+    >table{
+            >thead{
+            >tr{
+                grid-template-columns:repeat(5, 1fr);
+                }
+            }
+            >tbody{
+            >tr{
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+    }
+}
