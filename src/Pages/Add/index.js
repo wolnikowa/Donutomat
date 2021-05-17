@@ -1,7 +1,9 @@
 import React,{useCallback} from 'react';
+import { useHistory } from 'react-router-dom';
 import DonutForm from '../../components/DonutForm';
-const axios=require('axios')
+import axios from 'axios'
 const Add = () => {
+    let history = useHistory();
     const onSubmit = useCallback((form) => {
         axios.post('/api/donutors',{
             id:form.id,
@@ -10,8 +12,8 @@ const Add = () => {
             datedonut:new Date(new Date(form.donutDate).getDate()+7).toISOString(), //?
             addedby: "Ryszard Jakielski"
         }
-        ).then((response)=> console.log(response))
-        .then(()=>window.location.replace("/"))
+        )
+        .then(()=>history.push("/"))
         .catch((err)=>console.log(new Error(err)))
     }, []);
 

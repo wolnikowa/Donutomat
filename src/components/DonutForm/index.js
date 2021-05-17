@@ -14,7 +14,6 @@ const initialValues = {
 };
 
 const DonutForm = ({onSubmit}) => {
-    // onSubmit({document.getElementById("").value})
     return (
         <div className="formContainer">
             <header>
