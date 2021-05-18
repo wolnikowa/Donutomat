@@ -6,17 +6,14 @@ import FormInput from '../FormInput';
 import Button from '../Button';
 import "react-datepicker/dist/react-datepicker.css";
 import DatePickerField from '../DatePickerField';
+import onSubmit from '../../Pages/Add'
 
 const initialValues = {
     donutorName: 'Add donutor name',
     donutDate: '12/01/2021',
 };
 
-const DonutForm = () => {
-    const onSubmit = useCallback((values) => {
-        console.log(JSON.stringify(values, null, 2));
-    }, []);
-
+const DonutForm = ({onSubmit}) => {
     return (
         <div className="formContainer">
             <header>
@@ -32,7 +29,7 @@ const DonutForm = () => {
                         name="donutorName"
                         type="text"
                     />
-
+                    
                     <label htmlFor="donutDate">Date</label>
                     <div >
                         <DatePickerField name="donutDate" className="datepicker" />
