@@ -1,7 +1,11 @@
 {
     "presets": [
-        [
+        [ 
             "@babel/preset-env",
+            "es2015", 
+            "stage-0",
+            
+
             {
                 "modules": false,
                 "targets": {
@@ -23,3 +27,5 @@
         "@babel/plugin-proposal-class-properties"
     ]
 }
+
+

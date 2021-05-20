@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Table from '../../components/Table';
 import MarkAsDone from '../../components/MarkAsDone';
+import axios from 'axios';
 
-const data = [
+/*const data = [
     {
         id: '1',
         name: 'Julia Bessman',
@@ -25,6 +26,7 @@ const data = [
         datedonut: '21-03-2021'
     }
 ]
+*/
 
 const columnsDef = [
     {
@@ -51,9 +53,17 @@ const columnsDef = [
 ];
 
 const List = () => {
+    const[data, setData] = useState();
+
+    useEffect(async () => {
+        const result = await axios(
+            '/api/donutors',
+        );
+        setData(result.data);
+    });
     return (
         <Table data={data} columns={columnsDef} />
     )
-}
+} 
 
 export default List
