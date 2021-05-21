@@ -53,17 +53,20 @@ const columnsDef = [
 ];
 
 const List = () => {
-    const[data, setData] = useState();
+    const[data, setData] = useState([]);
 
-    useEffect(async () => {
-        const result = await axios(
-            '/api/donutors',
-        );
-        setData(result.data);
+    useEffect(() => {
+        const fetchData = async () => {
+            const result = await axios(
+                '/api/donutors',
+            );
+            setData(result.data);
+        }
+        fetchData();
     });
     return (
         <Table data={data} columns={columnsDef} />
     )
-} 
+}
 
 export default List
