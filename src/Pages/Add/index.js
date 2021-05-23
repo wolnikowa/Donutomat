@@ -5,14 +5,17 @@ import axios from 'axios'
 const Add = () => {
     let history = useHistory();
     const onSubmit = useCallback((form) => {
+        let a=new Date(form.donutDate)
+        a.setDate(a.getDate()+7)
         axios.post('/api/donutors',{
             id:form.id,
             name:form.donutorName,
             dateadd:new Date(form.donutDate).toISOString(),
-            datedonut:new Date(new Date(form.donutDate).getDate()+7).toISOString(), //?
+            datedonut:a.toISOString(),
             addedby: "Ryszard Jakielski"
         }
         )
+        .then((val)=>console.log(val.data))
         .then(()=>history.push("/"))
         .catch((err)=>console.log(new Error(err)))
     }, []);
