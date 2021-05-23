@@ -15,7 +15,6 @@ const Add = () => {
             addedby: "Ryszard Jakielski"
         }
         )
-        .then((val)=>console.log(val.data))
         .then(()=>history.push("/"))
         .catch((err)=>console.log(new Error(err)))
     }, []);
