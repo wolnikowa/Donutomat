@@ -6,7 +6,6 @@ import List from './Pages/List';
 import Dishonorable from './Pages/Dishonorable';
 import Add from './Pages/Add';
 
-
 const App = () => (
     <Router >
         <div>
