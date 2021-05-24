@@ -53,7 +53,7 @@ const columnsDef = [
 ];
 
 const List = () => {
-    const[data, setData] = useState([]);
+    const [data, setData] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -63,7 +63,7 @@ const List = () => {
             setData(result.data);
         }
         fetchData();
-    });
+    }, []);
     return (
         <Table data={data} columns={columnsDef} />
     )
