@@ -5,25 +5,28 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import List from './Pages/List';
 import Dishonorable from './Pages/Dishonorable';
 import Add from './Pages/Add';
+import { IntlProvider, FormattedDate } from 'react-intl';
 
 const App = () => (
-    <Router >
-        <div>
-            <Header />
-            <Nav />
-            <Switch>
-                <Route exact path="/">
-                    <List />
-                </Route>
-                <Route path="/Form">
-                    <Add />
-                </Route>
-                <Route path="/Dishonorable-donutors">
-                    <Dishonorable />
-                </Route>
-            </Switch>
-        </div>
-    </Router>
+    <IntlProvider locale='pl' defaultLocale='pl'>
+        <Router >
+            <div>
+                <Header />
+                <Nav />
+                <Switch>
+                    <Route exact path="/">
+                        <List />
+                    </Route>
+                    <Route path="/Form">
+                        <Add />
+                    </Route>
+                    <Route path="/Dishonorable-donutors">
+                        <Dishonorable />
+                    </Route>
+                </Switch>
+            </div>
+        </Router>
+    </IntlProvider >
 )
 
 export default App
