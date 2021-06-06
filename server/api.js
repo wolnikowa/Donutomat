@@ -6,22 +6,29 @@ let donutorsList = [
     name:'Julia Bessman',
     addedby: 'Ryszard Jakielski',
     dateadd: '20-03-2021',
-    datedonut: '21-03-2021'
+    datedonut: '27-03-2021'
    },
    {
        id: 2,
        name:'Alicja Kempa',
        addedby: 'Ryszard Jakielski',
-       dateadd: '20-03-2021',
-       datedonut: '21-03-2021'
+       dateadd: '06-06-2021',
+       datedonut: '13-06-2021'
    },
    {
        id: 3,
        name:'Wiktoria Wolnik',
        addedby:'Ryszard Jakielski',
-       dateadd:'20-03-2021',
-       datedonut: '21-03-2021'
-   }
+       dateadd:'04-06-2021',
+       datedonut: '11-06-2021'
+   },
+   {
+    id: 4,
+    name:'Łukasz Drzewiecki',
+    addedby:'Ryszard Jakielski',
+    dateadd:'08-04-2021',
+    datedonut: '15-04-2021'
+}
 ]
 
 
