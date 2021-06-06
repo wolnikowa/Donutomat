@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import List from './Pages/List';
 import Dishonorable from './Pages/Dishonorable';
 import Add from './Pages/Add';
-import { IntlProvider, FormattedDate } from 'react-intl';
+import { IntlProvider } from 'react-intl';
 
 const App = () => (
     <IntlProvider locale='pl' defaultLocale='pl'>
