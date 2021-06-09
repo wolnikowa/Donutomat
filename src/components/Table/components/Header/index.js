@@ -9,7 +9,7 @@ const Header = ({ columns }) => {
             <tr>
                 {
                     columns.map((column) => (
-                        <th>{column.label}</th>
+                        <th key={column.name}>{column.label}</th>
                     ))
                 }
             </tr>
