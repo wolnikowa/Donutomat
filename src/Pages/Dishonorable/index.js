@@ -1,33 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Table from '../../components/Table';
-import MarkAsDone from '../../components/MarkAsDone';
-
-const data = [
-    {
-        id: '1',
-        name: 'Julia Bessman',
-        addedby: 'Ryszard Jakielski',
-        dateadd: '20-03-2021',
-        datedonut: '21-03-2021',
-        lateness: '5'
-    },
-    {
-        id: '2',
-        name: 'Alicja Kempa',
-        addedby: 'Ryszard Jakielski',
-        dateadd: '20-03-2021',
-        datedonut: '21-03-2021',
-        lateness: '5'
-    },
-    {
-        id: '3',
-        name: 'Wiktoria Wolnik',
-        addedby: 'Ryszard Jakielski',
-        dateadd: '20-03-2021',
-        datedonut: '21-03-2021',
-        lateness: '5'
-    }
-]
+import axios from 'axios';
 
 const columnsDef = [
     {
@@ -52,8 +25,21 @@ const columnsDef = [
 
     }
 ];
-
+const TODAY=new Date();
 const Dishonorable = () => {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const result = await axios(
+                '/api/donutors',
+            );
+            let dishonorableData=result.data.filter(x=>new Date(x.datedonut)<TODAY)
+            setData(dishonorableData);
+            console.log(dishonorableData)
+        }
+        fetchData();
+    }, []);
     return (
         <Table data={data} columns={columnsDef} />
     )
