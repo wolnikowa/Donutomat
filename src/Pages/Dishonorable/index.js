@@ -25,7 +25,7 @@ const columnsDef = [
 
     }
 ];
-
+const TODAY=new Date();
 const Dishonorable = () => {
     const [data, setData] = useState([]);
 
@@ -34,8 +34,7 @@ const Dishonorable = () => {
             const result = await axios(
                 '/api/donutors',
             );
-            let today=(new Date()).toISOString()
-            let dishonorableData=(result.data).filter(x=>x.datedonut<today)
+            let dishonorableData=result.data.filter(x=>new Date(x.datedonut)<TODAY)
             setData(dishonorableData);
             console.log(dishonorableData)
         }
