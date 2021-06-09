@@ -3,25 +3,25 @@ const bodyParser = require("body-parser");
 let donutorsList = [
   {
     id: 1,
-    name:'Julia Bessman',
+    name: 'Julia Bessman',
     addedby: 'Ryszard Jakielski',
-    dateadd: '20-03-2021',
-    datedonut: '21-03-2021'
-   },
-   {
-       id: 2,
-       name:'Alicja Kempa',
-       addedby: 'Ryszard Jakielski',
-       dateadd: '20-03-2021',
-       datedonut: '21-03-2021'
-   },
-   {
-       id: 3,
-       name:'Wiktoria Wolnik',
-       addedby:'Ryszard Jakielski',
-       dateadd:'20-03-2021',
-       datedonut: '21-03-2021'
-   }
+    dateadd: '2021-03-20',
+    datedonut: '2021-03-21'
+  },
+  {
+    id: 2,
+    name: 'Alicja Kempa',
+    addedby: 'Ryszard Jakielski',
+    dateadd: '2021-03-20',
+    datedonut: '2021-03-23'
+  },
+  {
+    id: 3,
+    name: 'Wiktoria Wolnik',
+    addedby: 'Ryszard Jakielski',
+    dateadd: '2021-03-21',
+    datedonut: '2021-03-22'
+  }
 ]
 
 
@@ -31,14 +31,14 @@ const api = (app, server, compiler) => {
 
   app.post('/api/donutors', (req, res) => {
     const maxId = donutorsList.reduce((highest, current) => current.id > highest ? current.id : highest, 0);
-    donutorsList = [...donutorsList, {...req.body, id: maxId + 1}];
+    donutorsList = [...donutorsList, { ...req.body, id: maxId + 1 }];
     res.json(donutorsList);
   });
 
   app.put('/api/donutors/:id', (req, res) => {
     const { params: { id }, body } = req;
 
-    if(!id || !body) {
+    if (!id || !body) {
       return donutorsList;
     }
 

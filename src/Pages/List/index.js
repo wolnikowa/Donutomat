@@ -4,30 +4,6 @@ import MarkAsDone from '../../components/MarkAsDone';
 import axios from 'axios';
 import datatypes from '../../components/Table/datatypes';
 
-/*const data = [
-    {
-        id: '1',
-        name: 'Julia Bessman',
-        addedby: 'Ryszard Jakielski',
-        dateadd: '20-03-2021',
-        datedonut: '21-03-2021'
-    },
-    {
-        id: '2',
-        name: 'Alicja Kempa',
-        addedby: 'Ryszard Jakielski',
-        dateadd: '20-03-2021',
-        datedonut: '21-03-2021'
-    },
-    {
-        id: '3',
-        name: 'Wiktoria Wolnik',
-        addedby: 'Ryszard Jakielski',
-        dateadd: '20-03-2021',
-        datedonut: '21-03-2021'
-    }
-]
-*/
 
 const columnsDef = [
     {
