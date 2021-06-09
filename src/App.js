@@ -5,8 +5,14 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import List from './Pages/List';
 import Dishonorable from './Pages/Dishonorable';
 import Add from './Pages/Add';
+import MyDonuts from './Pages/Scheduler';
+import 'react-calendar/dist/Calendar.css';
 
-const App = () => (
+
+
+
+const App = () => {
+    return (
     <Router >
         <div>
             <Header />
@@ -20,10 +26,14 @@ const App = () => (
                 </Route>
                 <Route path="/Dishonorable-donutors">
                     <Dishonorable />
-                </Route>
-            </Switch>
+                    </Route>
+                    <Route path="/Calendar">
+                    <MyDonuts />
+                    </Route>
+
+                     </Switch>
         </div>
     </Router>
 )
-
+}
 export default App
