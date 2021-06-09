@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Table from '../../components/Table';
 import axios from 'axios';
+import datatypes from '../../components/Table/datatypes';
 
 const columnsDef = [
     {
@@ -13,11 +14,13 @@ const columnsDef = [
     },
     {
         name: 'dateadd',
-        label: 'Date of adding'
+        label: 'Date of adding',
+        type: datatypes.date
     },
     {
         name: 'datedonut',
-        label: 'Donuts date'
+        label: 'Donuts date',
+        type: datatypes.date
     },
     {
         name: 'lateness',
@@ -25,7 +28,7 @@ const columnsDef = [
 
     }
 ];
-const TODAY=new Date();
+const TODAY = new Date();
 const Dishonorable = () => {
     const [data, setData] = useState([]);
 
@@ -34,7 +37,7 @@ const Dishonorable = () => {
             const result = await axios(
                 '/api/donutors',
             );
-            let dishonorableData=result.data.filter(x=>new Date(x.datedonut)<TODAY)
+            let dishonorableData = result.data.filter(x => new Date(x.datedonut) < TODAY)
             setData(dishonorableData);
             console.log(dishonorableData)
         }
