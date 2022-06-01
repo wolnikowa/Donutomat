@@ -1,0 +1,48 @@
+a) Do czego służy warstwa typu pooling? Podaj przykład działania na małym obrazku.
+
+Warstwa typu pooling, czli warstwa łącząca jest używana do kompresji danych do mniejszego rozmiaru w celu przyspieszenia obliczeń. 
+Warstwa łącząca ma specjalne okienko (2x2, 3x3), które
+przesuwa się od lewej do prawej, od góry do dołu i zamienia
+grupy pikseli (4, 9) na jeden piksel.
+Na przykład w przypadku max-pooling wybieramy piksel o nawiększej wartości, w przypadku avg-pooling wyliczamy srednią z pikseli w okienku, a w przypadku min-pooling - wybieramy piksel o najmniejszej wartości
+
+Przykład działania max-pooling:
+(filters 2x2, stride 2)
+
+  INPUT        RESULT
+[1 4 3 4]      
+[5 6 7 8]  =>  [6 8]   
+[9 1 2 3]  =>  [9 7]
+[4 5 6 7]
+
+
+b) Do czego służy warstwa splotowa (conv layer)?
+
+Warstwa conv, czyli warstwa splotowa wykorzystuje specjalny filtr (zwany jądrem łaczącym, kernelem) do zamiany
+jednej warstwy neurnonów na drugą. 
+
+c) Podaj przykład kernela (jądra, filtru) i zademonstruj jego działanie na małym obrazku.
+
+Filtry przyjmują parametry size, stride i padding. Filtr o wymiarach przechodzi po obrazie przesuwając się o ilość pikseli określoną przez stride i dla każdej grupy pikseli zwraca nową wartość.
+
+Przykład działania warstwy splotowej:
+
+  INPUT     FILTER     RESULT
+[1 4 3]  =>  [1 0]   => [6 7] 
+[5 3 7]  =>  [1 0]   => [6 4]
+[1 1 2]     size = 2
+            stride = 1
+            padding = 0
+
+
+
+d) Przyjrzyj się sieci konwolucyjnej do rozpoznawania cyfry z obrazka:
+https://www.cs.cmu.edu/~aharley/vis/conv/
+Opisz krótko tę sieć (ile ma warstw pooling, conv, warstw w pełni połączonych)
+
+Sieć składa się z następujących warstw:
+- Input,
+- Output, 
+- 2 x Conv,
+- 2 x Pooling,
+- 2 x Fully-Connected
